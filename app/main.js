@@ -1,5 +1,6 @@
 // Globals
 var restartButton = document.getElementById("restartButton");
+var resetButton = document.getElementById("resetButton");
 var spaces = document.getElementsByClassName('space');
 var symbols = ['O', 'X'];
 var turn = 0;
@@ -10,6 +11,7 @@ var oScoreColumn = document.getElementById('oScore');
 var xScore = 0;
 var oScore = 0;
 var whoseTurn = document.getElementById('whoseTurn');
+var gameTitle = document.getElementById('gameTitle');
 
 
 
@@ -62,6 +64,7 @@ function takeSpace() {
 			notification.style.display = 'block';
 			winnerMessage.innerHTML = "Yay! " + currentPlayer + " won!";
 
+			// Track score
 			if (currentPlayer == symbols[1]) {
 				xScore += 1;
 				xScoreColumn.innerHTML = xScore;
@@ -87,10 +90,25 @@ function checkForWin(winArray){
 
 	// Wins happens if all these indices contain the same symbol
 
-	return spaces[winArray[0]].innerHTML !== '' && 
+	var results = (spaces[winArray[0]].innerHTML !== '' && 
 	spaces[winArray[0]].innerHTML === spaces[winArray[1]].innerHTML &&
-	spaces[winArray[0]].innerHTML === spaces[winArray[2]].innerHTML;
+	spaces[winArray[0]].innerHTML === spaces[winArray[2]].innerHTML);
+
+	// Highlight the 3-in-a-row
+	if (results) {
+		spaces[winArray[0]].style.color = "green";
+		spaces[winArray[1]].style.color = "green";
+		spaces[winArray[2]].style.color = "green";
+	}
+
+	return results;
 
 
 
+
+}
+
+function resetButton() {
+	
+	// Reset score here
 }
