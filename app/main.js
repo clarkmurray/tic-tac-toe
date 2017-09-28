@@ -5,6 +5,8 @@ var symbols = ['O', 'X'];
 var turn = 0;
 var notification = document.getElementById('notification');
 var winnerMessage = document.getElementById('winnerMessage');
+var xScoreColumn = document.getElementById('xScore');
+var oScoreColumn = document.getElementById('oScore');
 var xScore = 0;
 var oScore = 0;
 
@@ -55,15 +57,26 @@ function takeSpace() {
 			notification.style.display = 'block';
 			winnerMessage.innerHTML = "Yay! " + currentPlayer + " won!";
 
+			if (currentPlayer == symbols[1]) {
+				xScore += 1;
+				xScoreColumn.innerHTML = xScore;
+			} else {
+				oScore += 1;
+				oScoreColumn.innerHTML = oScore;
+			}
+
+
+
+
+
 
 		} 
 		else {
-			console.log("check");
 			if (turn == 9) {
 				if (notification.style.display != 'block') {
-				notification.style.display = "block";
-				winnerMessage.innerHTML = "CAT";
-			}
+					notification.style.display = "block";
+					winnerMessage.innerHTML = "CAT";
+				}
 			}
 		}
 	}
