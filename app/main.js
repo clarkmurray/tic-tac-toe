@@ -45,7 +45,7 @@ function takeSpace() {
 
 	turn++;
 	var currentPlayer = symbols[turn % 2];
-	whoseTurn.innerHTML = "It is " + currentPlayer + "'s turn";
+	whoseTurn.innerHTML = "It is " + (symbols[+!(turn % 2)]) + "'s turn";
 	this.innerHTML = currentPlayer;
 	this.removeEventListener("click", takeSpace);
 
