@@ -20,10 +20,10 @@ Recreate the childhood classic Tic-Tac-Toe in JavaScript.
 1. Keep score
 2. Light up the winning line
 3. Add a turn indicator
-4. Add sound effects
+4. Clear score
 5. Add a link to the rules, which displays in a modal
-6. Add a timer
-7. Cheat codes
+6. Add sound effects
+7. Make it pretty
 
 ## Too simple? Try...
 

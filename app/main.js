@@ -9,6 +9,7 @@ var xScoreColumn = document.getElementById('xScore');
 var oScoreColumn = document.getElementById('oScore');
 var xScore = 0;
 var oScore = 0;
+var whoseTurn = document.getElementById('whoseTurn');
 
 
 
@@ -29,6 +30,8 @@ function startGame() {
 	// Remove winner notification and make sure div is hidden
 	winnerMessage.innerHTML = '';
 	notification.style.display = 'none';
+	whoseTurn.style.display = 'block';
+	whoseTurn.innerHTML = "It is X's turn";
 
 
 	// Clear board and add click events on squares
@@ -42,6 +45,7 @@ function takeSpace() {
 
 	turn++;
 	var currentPlayer = symbols[turn % 2];
+	whoseTurn.innerHTML = "It is " + currentPlayer + "'s turn";
 	this.innerHTML = currentPlayer;
 	this.removeEventListener("click", takeSpace);
 
@@ -54,6 +58,7 @@ function takeSpace() {
 			}
 
 			// Notify the players 
+			whoseTurn.style.display = 'none';
 			notification.style.display = 'block';
 			winnerMessage.innerHTML = "Yay! " + currentPlayer + " won!";
 
@@ -64,11 +69,6 @@ function takeSpace() {
 				oScore += 1;
 				oScoreColumn.innerHTML = oScore;
 			}
-
-
-
-
-
 
 		} 
 		else {
