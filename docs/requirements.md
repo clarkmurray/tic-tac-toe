@@ -22,7 +22,7 @@ Recreate the childhood classic Tic-Tac-Toe in JavaScript.
 3. Add sound effects
 4. Add a turn indicator
 5. Add a timer
-6. Add a link to the rules, which displas in a modal
+6. Add a link to the rules, which displays in a modal
 7. Cheat codes
 
 ## Too simple? Try...
