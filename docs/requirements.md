@@ -8,6 +8,7 @@ Recreate the childhood classic Tic-Tac-Toe in JavaScript.
 2. X goes first.
 3. On their turn, each player places one of their symbols on an unoccupied space.
 4. The game continues until one player places three symbols in a straight line (horizontal, vertical, or diagonal - in which case, this player wins) or there are no remaining available spaces (in which case, the game is a draw).
+5. Alert players when one has won or the game is a draw.
 
 
 ## Additional Requirements

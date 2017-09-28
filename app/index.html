@@ -14,7 +14,38 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<h1>Tic-Tac-Toe</h1>
+
+	<div class="tictactoe container">
+
+		<h1>Tic-Tac-Toe</h1>
+
+		<div class="row bg-info img-rounded" id="notification">
+			<p class="text-center" id="winnerMessage"></p>
+		</div>
+
+		<div id="gameBoard">
+			<div class="row">
+				<div class="col-xs-4 space line-right line-bottom"></div>
+				<div class="col-xs-4 space line-right line-bottom"></div>
+				<div class="col-xs-4 space line-bottom"></div>
+			</div>
+			<div class="row">
+				<div class="col-xs-4 space line-right line-bottom"></div>
+				<div class="col-xs-4 space line-right line-bottom"></div>
+				<div class="col-xs-4 space line-bottom"></div>
+			</div>
+			<div class="row">
+				<div class="col-xs-4 space line-right"></div>
+				<div class="col-xs-4 space line-right"></div>
+				<div class="col-xs-4 space"></div>
+			</div>
+		</div>
+
+		<div class="row center-text">
+			<button class="btn btn-primary" id="restartButton">New Game</button>
+		</div>
+
+	</div>
 
 </body>
 </html>
