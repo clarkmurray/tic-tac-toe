@@ -18,6 +18,7 @@
 	<div class="tictactoe container">
 
 		<h1 id="gameTitle">Tic-Tac-Toe</h1>
+
 		<h3 id="whoseTurn"></h3>
 
 		<div class="row bg-info img-rounded" id="notification">
@@ -42,35 +43,24 @@
 			</div>
 		</div>
 
-		<div class="row center-text">
+		<div id="scoreArea">
+		<h4>Score</h4>
+			<span><h4 class="player">X: </h4></span>
+			<span id="xScore">0</span>
+			&nbsp; &nbsp; &nbsp; &nbsp;
+			<span><h4 class="player">O: </h4></span>
+			<span id="oScore">0</span>
+		</div>
+		<br />
+		<br />
+
+		<div class="row center-text" id="buttons">
 			<button class="btn btn-primary" id="restartButton">New Game</button>
+			&nbsp; &nbsp;
 			<button class="btn btn-primary" id="resetButton">Reset Score</button>
 		</div>
-
 		<br />
-		<h2>Score</h2>
-		
-		<div class="row center-text">
-			<div class="col-xs-4"></div>
-			<div class="col-xs-2">
-				<h4>X</h4>
-			</div>
-			<div class="col-xs-2">
-				<h4>O</h4>
-			</div>
-			<div class="col-xs-4"></div>
-		</div>
-
-		<div class="row center-text">
-			<div class="col-xs-4"></div>
-			<div class="col-xs-2">
-				<h4 id="xScore">0</h4>
-			</div>
-			<div class="col-xs-2">
-				<h4 id="oScore">0</h4>
-			</div>
-			<div class="col-xs-4"></div>
-		</div>
+		<p id="rules">Learn How to Play</p>
 
 	</div>
 

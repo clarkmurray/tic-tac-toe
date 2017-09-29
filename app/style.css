@@ -45,6 +45,27 @@
 	border-bottom: 2px solid #ccc;
 }
 
-h1, h2, h3 {
+
+h1, h2, h3, h4, h5, h6 {
 	text-align: center;
+}
+
+h5 {
+	display: inline;
+}
+
+#rules {
+	text-align: center;
+}
+
+#scoreArea {
+	text-align: center;
+}
+
+#buttons {
+	text-align: center;
+}
+
+h4.player {
+	display: inline;
 }
