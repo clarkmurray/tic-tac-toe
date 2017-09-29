@@ -22,6 +22,11 @@ document.onreadystatechange = function() {
 		restartButton.onclick = startGame;
 		startGame();
 	}
+
+	if (document.readyState == "interactive") {
+		resetButton.onclick = resetGame;
+		resetGame();
+	}	
 };
 
 function startGame() {
@@ -32,14 +37,16 @@ function startGame() {
 	// Remove winner notification and make sure div is hidden
 	winnerMessage.innerHTML = '';
 	notification.style.display = 'none';
+
+	// Notify whose turn it is
 	whoseTurn.style.display = 'block';
 	whoseTurn.innerHTML = "It is X's turn";
-
 
 	// Clear board and add click events on squares
 	for (i = 0; i < spaces.length; i++ ) {
 		spaces[i].innerHTML = '';
 		spaces[i].addEventListener("click", takeSpace);
+		spaces[i].style.color = "black";
 	}
 }
 
@@ -108,7 +115,12 @@ function checkForWin(winArray){
 
 }
 
-function resetButton() {
+function resetGame() {
 	
-	// Reset score here
+	xScore = 0;
+	oScore = 0;
+	xScoreColumn.innerHTML = "0";
+	oScoreColumn.innerHTML = "0";
+	startGame();
+
 }

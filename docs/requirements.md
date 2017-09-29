@@ -18,12 +18,11 @@ Recreate the childhood classic Tic-Tac-Toe in JavaScript.
 ## Stretch Goals
 
 [x] 1. Keep score
-[ ] 2. Light up the winning line
+[x] 2. Light up the winning line
 [x] 3. Add a turn indicator
-[ ] 4. Clear score
+[x] 4. Clear score
 [ ] 5. Make it pretty
 [ ] 6. Add a link to the rules, which displays in a modal
-[ ] 7. Add sound effects
 
 ## Too simple? Try...
 
